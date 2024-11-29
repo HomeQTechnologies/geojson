@@ -15,7 +15,7 @@ min_lng, min_lat, max_lng, max_lat = sweden.bounds
 def geo_json_for_zoom(zoom):
 
     rect = Rect(max_lat, min_lng, min_lat, max_lng)
-    tiles = rect.get_tiles(9)
+    tiles = rect.get_tiles(zoom)
 
     features = []
     for tile in tiles:
